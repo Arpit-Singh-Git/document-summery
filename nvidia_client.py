@@ -32,9 +32,9 @@ class NvidiaLLMClient:
         - NVIDIA_API_BASE (e.g., https://integrate.api.nvidia.com/v1)
         - NVIDIA_MODEL (e.g., meta/llama-3.1-8b-instruct)
         """
-        self.api_key = api_key or os.getenv("NVIDIA_API_KEY", "")
-        self.api_base = api_base or os.getenv("NVIDIA_API_BASE", "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")
-        self.model = model or os.getenv("NVIDIA_MODEL", "llama-3_2-nemoretriever-300m-embed-v1")
+        self.api_key = api_key or os.getenv("NVIDIA_API_KEY", "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")
+        self.api_base = api_base or os.getenv("NVIDIA_API_BASE", "https://integrate.api.nvidia.com/v1")
+        self.model = model or os.getenv("NVIDIA_MODEL", "llama-3.1-8b-instruct")
         self.timeout_sec = timeout_sec
 
         if not self.api_key:
