@@ -60,8 +60,7 @@ def read_pdf_file(uploaded) -> str:
             text_chunks.append(page.extract_text() or "")
     except Exception as e:
         return f"Failed to parse PDF: {e}"
-    return "
-".join(text_chunks).strip()
+    return "".join(text_chunks).strip()
 
 
 def get_default(key: str, fallback: Optional[str] = None) -> Optional[str]:
